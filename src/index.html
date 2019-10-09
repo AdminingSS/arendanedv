@@ -8,7 +8,7 @@
     <title>Document</title>
 
     <!-- UIkit CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/css/uikit.min.css"/>
 
     <!-- UIkit JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-rc.26/js/uikit.min.js"></script>
@@ -20,59 +20,460 @@
     <div class="uk-child-width-1-1 uk-height-viewport uk-flex uk-flex-wrap uk-flex-wrap-between">
         <div>
 
-            <!--Header-->
-            <header class="uk-navbar-container uk-position-relative">
-                <nav uk-navbar>
-                    <div class="uk-navbar-left">
-
-                        <!--mobile menu toggle-->
-                        <a href="#offcanvas-overlay" class="uk-navbar-toggle uk-hidden@l"
-                           uk-navbar-toggle-icon uk-toggle></a>
-
-                        <!--logo-->
-                        <a class="uk-navbar-item uk-logo" href="/">
-                            <img src="images/logo_tourweek.png" alt="">
-                        </a>
-
-                        <!--navbar menu-->
-                        <ul class="uk-navbar-nav uk-visible@l">
-                            <li><a href="#"></a></li>
-                            <li>
-                                <a href="#"></a>
-
-                                <div class="uk-navbar-dropdown"
-                                     uk-drop="mode: click; boundary: !header; boundary-align: true; pos: bottom-justify;">
-                                    <div class="uk-container">
-                                        <ul class="uk-nav uk-navbar-dropdown-nav uk-column-1-4">
-                                            <li><a href="#"></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-
+            <!--Top section-->
+            <div class="tm-background-top">
+                <div class="bg-mask"></div>
+                <div class="tm-active-image-bg">
+                </div>
+                <div class="image-mask"></div>
+                <div class="tm-active-image-wrap tm-active-image-top">
+                    <div class="uk-width-1-1 uk-height-1-1 uk-position-relative">
+                        <div class="tm-active-image tm-active-image-one uk-active">
+                            <div class="tm-baloon">
+                                <div>Привет, я Ольга. Ищу 1-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Метрдотель ресторана</div>
+                            </div>
+                            <img src="images/img-olga.png" alt="">
+                        </div>
+                        <div class="tm-active-image tm-active-image-two">
+                            <div class="tm-baloon">
+                                <div>Привет, я Сергей. Ищу 3х-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Директор ресторана</div>
+                            </div>
+                            <img src="images/img-sergey.png" alt="">
+                        </div>
+                        <div class="tm-active-image tm-active-image-three">
+                            <div class="tm-baloon">
+                                <div>Привет, я Луи. Ищу 3х-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Директор по обучению персонала</div>
+                            </div>
+                            <img src="images/img-lui.png" alt="">
+                        </div>
+                        <div class="tm-active-image tm-active-image-four">
+                            <div class="tm-baloon tm-baloon-left">
+                                <div>Привет, я Алексей. Ищу 3х-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Шеф - повар ресторана</div>
+                            </div>
+                            <img src="images/img-alexiy.png" alt="">
+                        </div>
+                        <div class="tm-active-image tm-active-image-five">
+                            <div class="tm-baloon tm-baloon-left">
+                                <div>Привет, я Игорь. Ищу 1-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Метрдотель ресторана</div>
+                            </div>
+                            <img src="images/img-ihor.png" alt="">
+                        </div>
+                        <div class="tm-active-image tm-active-image-six">
+                            <div class="tm-baloon tm-baloon-left">
+                                <div>Привет, я Антон. Ищу 1-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Су - шеф ресторана</div>
+                            </div>
+                            <img src="images/img-anton.png" alt="">
+                        </div>
+                        <div class="tm-image-trigger tm-image-trigger-one"></div>
+                        <div class="tm-image-trigger tm-image-trigger-two"></div>
+                        <div class="tm-image-trigger tm-image-trigger-three"></div>
+                        <div class="tm-image-trigger tm-image-trigger-four"></div>
+                        <div class="tm-image-trigger tm-image-trigger-five"></div>
+                        <div class="tm-image-trigger tm-image-trigger-six"></div>
                     </div>
+                </div>
+                <!--Header-->
+                <header class="uk-navbar-container uk-position-relative uk-navbar-transparent">
+                    <div class="uk-container">
+                        <nav uk-navbar>
+                            <div class="uk-navbar-left">
 
-                    <div class="uk-navbar-center uk-visible@l"></div>
+                                <!--logo-->
+                                <a class="uk-navbar-item uk-logo" href="/">
+                                    <span class="logo-icon">food</span>
+                                    <span>group</span>
+                                </a>
 
-                    <div class="uk-navbar-right"></div>
-                </nav>
-            </header>
+                                <div class="tm-navbar-description uk-navbar-item">
+                                    Федеральная ресторанная сеть:<br class="tm-mini-mobile-invisible"/>
+                                    открываем рестораны в Казани
+                                </div>
+
+                            </div>
+
+                            <div class="uk-navbar-right tm-flex-wrap-override-mini-mobile">
+                                <div class="tm-navbar-coordinator uk-navbar-item">
+                                    Кординатор <br class="uk-visible@s"/>заселения
+                                </div>
+
+                                <div class="tm-navbar-name uk-navbar-item">
+                                    Александр
+                                </div>
+
+                                <div class="tm-navbar-phone uk-navbar-item">
+                                    <span class="phone-icon"><img src="images/telephone.svg" alt="" data-uk-svg></span>
+                                    8 912 345 67 89
+                                </div>
+
+                                <div class="uk-navbar-item uk-visible@s">
+                                    <a class="tm-link-button" href="#">Обратный звонок</a>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </header>
+
+                <!-- Section -->
+                <div class="uk-section">
+                    <div class="uk-container">
+                        <div class="uk-flex uk-flex-between uk-flex-wrap">
+                            <div class="uk-width-1-2@m uk-width-2-5@l tm-z-index">
+                                <h1>Снимем квартиры
+                                    для сотрудников
+                                    на срок от 11 месяцев</h1>
+                                <div class="tm-line-text">
+                                    без посредников
+                                </div>
+                                <div class="uk-width-1-1 uk-hidden@m tm-z-index uk-text-center uk-margin-bottom">
+                                    <img src="images/staff-mobile.png" alt="">
+                                </div>
+                                <button class="tm-margin-auto-mobile uk-button uk-button-primary"><span>Оставить заявку</span><img
+                                        src="images/button-arrow.png" alt=""></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Section -->
-            <div class="uk-section">
+            <div class="tm-background-lines uk-section">
                 <div class="uk-container">
+                    <div class="uk-text-center">
+                        <span class="tm-line"></span>
+                    </div>
+                    <h2>Список необходимых квартир<br/>
+                        и их стоимость</h2>
+                    <div class="tm-room-panels uk-grid-collapse uk-child-width-auto uk-flex-around uk-flex-between@l"
+                         data-uk-grid>
+                        <div class="tm-max-width-1-1 uk-margin-medium-bottom">
+                            <div class="tm-room-panel">
+                                <img src="images/1-room.png" alt="">
+                                <div class="tm-room-description">
+                                    <div>
+                                        <span class="room-digit">
+                                            1
+                                        </span>
+                                        <span class="room-text">
+                                            комнатная
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <ul class="room-features">
+                                            <li>качественный ремонт</li>
+                                            <li>дома 2000х годов постройки</li>
+                                            <li>не менее 37 кв.м.</li>
+                                        </ul>
+                                        <div class="room-pricing">
+                                            15 000 - 40 000 руб/мес.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="uk-button uk-button-primary"><span>Оставить заявку</span><img
+                                    src="images/button-arrow.png" alt=""></button>
+                        </div>
+                        <div class="tm-max-width-1-1 uk-margin-medium-bottom">
+                            <div class="tm-room-panel">
+                                <img src="images/2-room.png" alt="">
+                                <div class="tm-room-description">
+                                    <div>
+                                        <span class="room-digit">
+                                            2
+                                        </span>
+                                        <span class="room-text">
+                                            комнатная
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <ul class="room-features">
+                                            <li>качественный ремонт</li>
+                                            <li>дома 2000х годов постройки</li>
+                                            <li>не менее 50 кв.м.</li>
+                                        </ul>
+                                        <div class="room-pricing">
+                                            20 000 - 75 000 руб/мес.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="uk-button uk-button-primary"><span>Оставить заявку</span><img
+                                    src="images/button-arrow.png" alt=""></button>
+                        </div>
+                        <div class="tm-max-width-1-1 uk-margin-medium-bottom">
+                            <div class="tm-room-panel">
+                                <img src="images/3-room.png" alt="">
+                                <div class="tm-room-description">
+                                    <div>
+                                        <span class="room-digit">
+                                            3-5
+                                        </span>
+                                        <span class="room-text room-text-long">
+                                            комнатная
+                                        </span>
+                                    </div>
+                                    <div>
+                                        <ul class="room-features">
+                                            <li>качественный ремонт</li>
+                                            <li>дома 2000х годов постройки</li>
+                                            <li>не менее 70 кв.м.</li>
+                                        </ul>
+                                        <div class="room-pricing">
+                                            28 000 - 200 000 руб/мес.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="uk-button uk-button-primary"><span>Оставить заявку</span><img
+                                    src="images/button-arrow.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <!-- Section -->
+            <div class="tm-background-table uk-section">
+                <div class="uk-container">
+                    <h2>Для кого снимем квартиру</h2>
+                    <div class="uk-width-1-1 uk-overflow-auto">
+                        <table class="tm-table">
+                            <tr>
+                                <th>№</th>
+                                <th>Информация о жильце (срок аренды от 11 месяцев)</th>
+                                <th>Сколько комнат ищем</th>
+                                <th>Состояние поиска</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>Региональный директор, Александр 42 года, женат, один ребёнок 17 лет</td>
+                                <td>3 и более</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Директор ресторана 1, Владимир 37 лет, не женат, детей нет</td>
+                                <td>1 и более</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Директор ресторана 2, Сергей 39 лет, женат, 2 детей 10 и 12 лет</td>
+                                <td>3 и более</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Директор по обучению персонала, Луи 37 лет, гражданин, Франции</td>
+                                <td>2</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td>Шеф - повар ресторана, Алексей 40 лет,женат, 2 детей 7 и 14 лет</td>
+                                <td>3 и более</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td>Су - шеф ресторана 1, Француа 39 лет, женат, гражданин Франции</td>
+                                <td>2</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td>Су - шеф ресторана 2, Антон 29 лет, не женат, необходимо парковочное место</td>
+                                <td>1</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>Сомелье, Паоло 31 год, не женат, гражданин Швеции</td>
+                                <td>1 и более</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td>Повар холодных закусок, Виктор 27 лет, женат, ребенок 5 лет</td>
+                                <td>2 и более</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>10</td>
+                                <td>Метрдотель ресторана 1, Ольга 25 лет, замужем, детей нет</td>
+                                <td>1</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>11</td>
+                                <td>Метрдотель ресторана 2, Игорь 26 лет, женат, детей нет</td>
+                                <td>1</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>12</td>
+                                <td>Повар-кондитер ресторана 1, Сюзана 34 года, не замужем, гражданка Франции</td>
+                                <td>1</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>13</td>
+                                <td>Повар-кондитер ресторана 2, Оксана 28 лет, не замужем, детей нет</td>
+                                <td>1</td>
+                                <td>
+                                    <a href="">Предложите свою квартиру</a>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section -->
+            <div class="tm-background-lines uk-section uk-position-relative uk-overflow-hidden">
+                <div class="tm-active-image-bg tm-image-bg-alt">
+                </div>
+                <div class="tm-active-image-wrap tm-active-image-bottom">
+                    <div class="uk-width-1-1 uk-height-1-1 uk-position-relative">
+                        <div class="tm-active-image tm-active-image-one">
+                            <div class="tm-baloon">
+                                <div>Привет, я Ольга. Ищу 1-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Метрдотель ресторана</div>
+                            </div>
+                            <img src="images/img-olga.png" alt="">
+                        </div>
+                        <div class="tm-active-image tm-active-image-two">
+                            <div class="tm-baloon">
+                                <div>Привет, я Сергей. Ищу 3х-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Директор ресторана</div>
+                            </div>
+                            <img src="images/img-sergey.png" alt="">
+                        </div>
+                        <div class="tm-active-image tm-active-image-three">
+                            <div class="tm-baloon">
+                                <div>Привет, я Луи. Ищу 3х-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Директор по обучению персонала</div>
+                            </div>
+                            <img src="images/img-lui.png" alt="">
+                        </div>
+                        <div class="tm-active-image tm-active-image-four">
+                            <div class="tm-baloon tm-baloon-left">
+                                <div>Привет, я Алексей. Ищу 3х-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Шеф - повар ресторана</div>
+                            </div>
+                            <img src="images/img-alexiy.png" alt="">
+                        </div>
+                        <div class="tm-active-image tm-active-image-five">
+                            <div class="tm-baloon tm-baloon-left">
+                                <div>Привет, я Игорь. Ищу 1-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Метрдотель ресторана</div>
+                            </div>
+                            <img src="images/img-ihor.png" alt="">
+                        </div>
+                        <div class="tm-active-image tm-active-image-six uk-active">
+                            <div class="tm-baloon tm-baloon-left">
+                                <div>Привет, я Антон. Ищу 1-комнатную квартиру.</div>
+                                <div class="baloon-occupation">Су - шеф ресторана</div>
+                            </div>
+                            <img src="images/img-anton.png" alt="">
+                        </div>
+                        <div class="tm-image-trigger-bottom tm-image-trigger-one"></div>
+                        <div class="tm-image-trigger-bottom tm-image-trigger-two"></div>
+                        <div class="tm-image-trigger-bottom tm-image-trigger-three"></div>
+                        <div class="tm-image-trigger-bottom tm-image-trigger-four"></div>
+                        <div class="tm-image-trigger-bottom tm-image-trigger-five"></div>
+                        <div class="tm-image-trigger-bottom tm-image-trigger-six"></div>
+                    </div>
+                </div>
+                <div class="uk-container">
+                    <div class="uk-flex uk-flex-between">
+                        <div class="uk-width-1-2@m uk-width-2-5@l tm-z-index">
+                            <h2 class="uk-text-left@m">Формируем
+                                квартирный
+                                резерв для новых
+                                сотрудников</h2>
+                            <div class="tm-line-text-alt">
+                                Если ваша квартира уже сдана,
+                                но может осовободиться в ближайшие месяцы,
+                                оставьте заявку для резервирования
+                                под аренду в будущем
+                            </div>
+                            <div class="uk-width-1-1 uk-hidden@m tm-z-index uk-text-center uk-margin-bottom">
+                                <img src="images/staff-mobile.png" alt="">
+                            </div>
+                            <button class="tm-button-regular uk-button uk-button-primary tm-margin-auto-mobile">
+                                <span>Хочу в квартирный резерв</span></button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
         </div>
 
         <!--Footer-->
-        <footer class="uk-section">
+        <footer>
             <div class="uk-container">
+                <div class="uk-flex uk-flex-between uk-flex-wrap uk-margin-bottom">
+                    <!--logo-->
+                    <a class="uk-logo uk-navbar-item" href="/">
+                        <span class="logo-icon">food</span>
+                        <span>group</span>
+                    </a>
 
-            </div>
+                    <div class="uk-navbar-item">
+                        <a class="tm-navbar-politic" href="">Политика конфиденциальности</a>
+                    </div>
+
+                    <div class="tm-flex-wrap-override-mini-mobile uk-flex uk-flex-between uk-flex-nowrap uk-width-1-1 uk-width-auto@m">
+                        <div class="tm-navbar-coordinator uk-navbar-item">
+                            Кординатор <br class="uk-visible@s"/>заселения
+                        </div>
+
+                        <div class="tm-navbar-name uk-navbar-item">
+                            Александр
+                        </div>
+
+                        <div class="tm-navbar-phone uk-navbar-item">
+                            <span class="phone-icon"><img src="images/telephone.svg" alt="" data-uk-svg></span>
+                            8 912 345 67 89
+                        </div>
+
+                        <div class="uk-navbar-item uk-visible@s">
+                            <a class="tm-link-button" href="#">Обратный звонок</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="tm-designed uk-text-right">
+                    Разработка сайта: <span>Меркури Системс</span>
+                </div>
         </footer>
     </div>
 
