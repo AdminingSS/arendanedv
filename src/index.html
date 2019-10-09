@@ -112,7 +112,7 @@
                                 </div>
 
                                 <div class="uk-navbar-item uk-visible@s">
-                                    <a class="tm-link-button" href="#">Обратный звонок</a>
+                                    <a class="tm-link-button" href="#modalCall" data-uk-toggle>Обратный звонок</a>
                                 </div>
                             </div>
                         </nav>
@@ -133,7 +133,8 @@
                                 <div class="uk-width-1-1 uk-hidden@m tm-z-index uk-text-center uk-margin-bottom">
                                     <img src="images/staff-mobile.png" alt="">
                                 </div>
-                                <button class="tm-margin-auto-mobile uk-button uk-button-primary"><span>Оставить заявку</span><img
+                                <button class="tm-margin-auto-mobile uk-button uk-button-primary">
+                                    <span>Оставить заявку</span><img
                                         src="images/button-arrow.png" alt=""></button>
                             </div>
                         </div>
@@ -429,7 +430,7 @@
                             <div class="uk-width-1-1 uk-hidden@m tm-z-index uk-text-center uk-margin-bottom">
                                 <img src="images/staff-mobile.png" alt="">
                             </div>
-                            <button class="tm-button-regular uk-button uk-button-primary tm-margin-auto-mobile">
+                            <button class="tm-button-regular uk-button uk-button-primary tm-margin-auto-mobile" type="button" data-uk-toggle="target: #modalApt">
                                 <span>Хочу в квартирный резерв</span></button>
                         </div>
                     </div>
@@ -474,21 +475,92 @@
                 <div class="tm-designed uk-text-right">
                     Разработка сайта: <span>Меркури Системс</span>
                 </div>
+            </div>
         </footer>
     </div>
 
-    <!-- Off-canvas -->
-    <div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">
-        <div class="uk-offcanvas-bar">
-            <button class="uk-offcanvas-close" type="button" uk-close></button>
-
-            <div class="uk-card uk-flex uk-flex-center">
-                <ul class="uk-nav">
-                    <li><a href="#"></a></li>
-                </ul>
+    <div id="modalApt" data-uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <h2 class="uk-modal-title">Оставьте заявку</h2>
+            <div class="tm-form-description">на рассмотрение вашей квартиры</div>
+            <div>
+                <form class="uk-form-stacked" action="">
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-apt-text-name">Ваше имя</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="form-apt-text-name" type="text" placeholder="Ваше имя">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-apt-text-phone">Номер телефона*</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="form-apt-text-phone" type="text" placeholder="+7 (_____) ______ - ____ - ____">
+                        </div>
+                    </div>
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-apt-text-cost">Желаемая стоимость аренды:</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="form-apt-text-cost" type="text" placeholder="200 000 руб.">
+                        </div>
+                    </div>
+                    <div class="uk-margin-medium">
+                        <div>
+                            Загрузите фотографии квартиры (если есть):
+                        </div>
+                        <div>
+                            <a class="tm-link-button" href="#">Загрузить</a>
+                        </div>
+                    </div>
+                    <button class="uk-margin-auto uk-button uk-button-primary">
+                        <span>Оставить заявку</span><img
+                            src="images/button-arrow.png" alt="">
+                    </button>
+                </form>
             </div>
         </div>
     </div>
+
+    <div id="modalCall" data-uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <button class="uk-modal-close-outside" type="button" uk-close></button>
+            <h2 class="uk-modal-title">Оставьте заявку</h2>
+            <div class="tm-form-description">на обратный звонок</div>
+            <div>
+                <form class="uk-form-stacked" action="">
+                    <div class="uk-margin">
+                        <label class="uk-form-label" for="form-call-text-name">Ваше имя</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="form-call-text-name" type="text" placeholder="Ваше имя">
+                        </div>
+                    </div>
+                    <div class="uk-margin uk-margin-medium-bottom">
+                        <label class="uk-form-label" for="form-call-text-phone">Номер телефона*</label>
+                        <div class="uk-form-controls">
+                            <input class="uk-input" id="form-call-text-phone" type="text" placeholder="+7 (_____) ______ - ____ - ____">
+                        </div>
+                    </div>
+                    <button class="uk-margin-auto uk-button uk-button-primary">
+                        <span>Оставить заявку</span><img
+                            src="images/button-arrow.png" alt="">
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Off-canvas -->
+    <!--<div id="offcanvas-overlay" uk-offcanvas="mode: push; overlay: true">-->
+        <!--<div class="uk-offcanvas-bar">-->
+            <!--<button class="uk-offcanvas-close" type="button" uk-close></button>-->
+
+            <!--<div class="uk-card uk-flex uk-flex-center">-->
+                <!--<ul class="uk-nav">-->
+                    <!--<li><a href="#"></a></li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
 
 </div>
 

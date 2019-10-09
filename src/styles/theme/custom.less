@@ -627,6 +627,41 @@ footer {
   flex-wrap: nowrap;
 }
 
+.uk-modal-dialog {
+  width: 563px;
+  max-width: 100%;
+
+  .uk-modal-title {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    color: #514f50;
+    margin-bottom: 20px;
+  }
+
+  .tm-form-description {
+    font-size: 20px;
+    text-align: center;
+    color: #a2a2a2;
+    margin-bottom: 45px;
+  }
+
+  .uk-form-label {
+    font-size: 14px;
+    font-weight: normal;
+    letter-spacing: 1.4px;
+    color: #514f50;
+  }
+
+  .tm-link-button {
+    color: #514f50;
+
+    &:hover {
+      color: darken(#514f50, 20%);
+    }
+  }
+}
+
 @media (max-width: 1399px) {
   .tm-active-image-bg, .tm-active-image-wrap {
     left: 43%;
@@ -771,5 +806,13 @@ footer {
   .tm-button-regular {
     font-size: 12px;
     padding: 0 15px;
+  }
+
+  .uk-modal-body {
+    padding: 30px 15px;
+
+    .uk-button {
+      padding: 0 30px;
+    }
   }
 }
