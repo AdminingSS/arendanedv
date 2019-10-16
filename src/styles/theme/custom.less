@@ -257,6 +257,13 @@ header {
   color: @global-inverse-color;
 
   min-height: 40px;
+
+  a {
+    font-family: @global-font-family;
+    font-size: @global-font-size;
+    font-weight: 100;
+    color: @global-inverse-color;
+  }
 }
 
 .uk-logo {
@@ -323,7 +330,7 @@ header {
 
 .tm-navbar-coordinator {
   font-style: italic;
-  color: rgba(255, 255, 255, 0.16);
+  color: rgba(255, 255, 255, 0.5);
 }
 
 .tm-navbar-name {
@@ -344,7 +351,7 @@ header {
   }
 }
 
-.tm-link-button {
+a.tm-link-button {
   font-size: @global-small-font-size;
   font-weight: bold;
   line-height: 1.75;
@@ -411,7 +418,9 @@ header {
 }
 
 .tm-button-regular {
+  position: relative;
   padding-left: 45px;
+  z-index: 2000;
 }
 
 .tm-room-panels {
@@ -564,6 +573,12 @@ footer {
 
   .uk-navbar-item {
     color: #343333;
+    font-weight: normal;
+
+    a {
+      color: #343333;
+      font-weight: normal;
+    }
   }
 
   .uk-logo {
@@ -591,11 +606,12 @@ footer {
     color: rgba(52, 51, 51, 0.6);
   }
 
-  .tm-link-button {
-    color: #343333;
+  a.tm-link-button {
+    color: @global-emphasis-color;
+    font-weight: bold;
 
     &:hover, &:active {
-      color: rgba(0, 0, 0, 0.5);
+      color: rgb(0, 0, 0);
       text-decoration: none;
     }
   }
@@ -604,9 +620,11 @@ footer {
 .tm-designed {
   font-size: 13px;
   font-weight: 200;
-  color: rgba(51, 49, 50, 0.65);
+  color: rgb(51, 49, 50);
 
-  span {
+  a {
+    font-size: 13px;
+    color: rgb(51, 49, 50);
     font-family: @headers-font-family;
     font-weight: normal;
   }
@@ -651,8 +669,9 @@ footer {
     color: #514f50;
   }
 
-  .tm-link-button {
+  a.tm-link-button {
     color: #514f50;
+    font-weight: bold;
 
     &:hover {
       color: darken(#514f50, 20%);
@@ -662,6 +681,39 @@ footer {
 
 .tm-micromobile {
   display: none;
+}
+
+.uk-modal-close-outside {
+  top: 12px;
+  right: -12px;
+  background: rgba(0,0,0,0.5);
+  border-radius: 50%;
+
+  &:hover {
+    background: rgba(0,0,0,0.7);
+  }
+}
+
+.tm-files-preview {
+  padding: 5px;
+  max-height: 200px;
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    height: 75px;
+    width: 75px;
+    overflow: hidden;
+    margin-right: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1399px) {
@@ -677,15 +729,18 @@ footer {
 }
 
 @media (max-width: 1199px) {
+
   .tm-active-image-bg {
     top: 40%;
     left: 60%;
     width: 342px;
     height: 340px;
-    background-image: url('../../images/staff-mobile.png');
+    background-image: url('../../images/staff-mobile-light.png');
 
     &.tm-image-bg-alt {
-      background-image: url('../../images/staff-mobile.png');
+      background-image: url('../../images/staff-mobile-bottom.png');
+      width: 393px;
+      height: 346px;
     }
   }
 
@@ -745,15 +800,15 @@ footer {
     }
   }
 
-  .tm-active-image-wrap.tm-active-image-bottom .tm-active-image.tm-active-image-three {
-    top: -45px;
-    left: 67px;
-    transform: scale(1.4);
+  .tm-active-image-wrap.tm-active-image-bottom .tm-active-image.tm-active-image-five {
+    top: -69px;
+    left: 52px;
+    transform: scale(1.22);
 
     .tm-baloon {
-      transform: translateX(0) scale(0.47);
-      top: 110px;
-      left: -25px;
+      transform: translateX(182px) scale(0.6);
+      top: 155px;
+      left: -207px;
     }
   }
 
@@ -769,16 +824,16 @@ footer {
     }
   }
 
-  .tm-active-image-wrap.tm-active-image-bottom .tm-active-image.tm-active-image-four {
-    top: 76px;
-    left: 221px;
-    transform: scale(3.3);
+  .tm-active-image-wrap.tm-active-image-bottom .tm-active-image.tm-active-image-six {
+    top: -138px;
+    left: 99px;
+    transform: scale(0.973);
 
     .tm-baloon {
-      transform: translateX(0) scale(0.21);
-      top: 35px;
-      left: -85px;
-      width: 170%;
+      transform: translateX(0) scale(0.7);
+      top: 224px;
+      left: -111px;
+      width: 69%;
     }
   }
 
@@ -832,9 +887,21 @@ footer {
   .uk-navbar-item {
     padding: 0 10px;
   }
+
+  .tm-navbar-phone {
+    padding-left: 20px;
+    .phone-icon {
+      left: 3px;
+    }
+  }
 }
 
 @media(max-width: 959px) {
+
+  .tm-order-first-mobile {
+    order: -1;
+    margin-bottom: 20px;
+  }
 
   .tm-images-mobile {
     .tm-active-image-bg {
@@ -874,6 +941,38 @@ footer {
   }
   .uk-navbar-container>.uk-container .uk-navbar-right, .uk-navbar-container>.uk-container .uk-navbar-left {
     margin: auto;
+  }
+}
+
+@media(max-width: 639px) {
+  .tm-background-top {
+    background-image: url(../../images/bg-top-mobile.png);
+    background-size: auto auto;
+    background-position: 55% bottom;
+    background-repeat: no-repeat;
+    z-index: 0;
+    min-height: 800px;
+
+    .uk-section {
+      padding-top: 20px;
+      padding-bottom: 20px;
+
+      .tm-images-mobile .tm-active-image-bg {
+        background-image: url(../../images/staff-mobile.png);
+      }
+    }
+  }
+
+  header {
+    padding: 20px 0;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+  }
+
+  .tm-line-text {
+    margin-bottom: 30px;
   }
 }
 
@@ -920,11 +1019,16 @@ footer {
     min-width: 100%;
   }
 
+  .tm-room-panels .uk-button {
+    margin: auto;
+  }
+
   .tm-room-panel {
-    margin-bottom: 50px;
     width: 273px;
     height: 364px;
     max-width: 100%;
+    margin: auto;
+    margin-bottom: 50px;
   }
 
   .tm-room-panel .tm-room-description {
@@ -962,5 +1066,52 @@ footer {
 
   .tm-micromobile {
     display: block;
+    margin: auto;
   }
+
+  .tm-background-top .tm-images-mobile {
+    display: none;
+  }
+
+  .tm-images-mobile .tm-active-image-bg, .tm-images-mobile .tm-active-image-wrap {
+    width: 273px;
+    height: 240px;
+  }
+
+  .tm-active-image-wrap.tm-active-image-bottom .tm-active-image.tm-active-image-one {
+    top: -235px;
+    left: -188px;
+    transform: scale(0.56);
+
+    .tm-baloon {
+      transform: translateX(70px);
+      left: 234px;
+      top: 255px;
+    }
+  }
+
+  .tm-active-image-wrap.tm-active-image-bottom .tm-active-image.tm-active-image-two {
+    top: -147px;
+    left: -85px;
+    transform: scale(0.74);
+
+    .tm-baloon {
+      transform: translateX(40px) scale(0.7);
+      top: 181px;
+      left: 161px;
+    }
+  }
+
+  .tm-active-image-wrap.tm-active-image-bottom .tm-active-image.tm-active-image-five {
+    top: -114px;
+    left: -13px;
+    transform: scale(0.87);
+  }
+
+  .tm-active-image-wrap.tm-active-image-bottom .tm-active-image.tm-active-image-six {
+    top: -227px;
+    left: -26px;
+    transform: scale(0.599);
+  }
+
 }
